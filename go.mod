@@ -3,17 +3,16 @@ module github.com/gethinode/customization-demo
 go 1.20
 
 require (
-	github.com/airbnb/lottie-web v5.12.2+incompatible // indirect
-	github.com/gethinode/hinode v0.26.3 // indirect
-	github.com/gethinode/mod-bootstrap v1.3.1 // indirect
-	github.com/gethinode/mod-flexsearch v1.12.1 // indirect
-	github.com/gethinode/mod-flexsearch/v2 v2.0.1 // indirect
-	github.com/gethinode/mod-fontawesome v1.10.0 // indirect
-	github.com/gethinode/mod-katex v1.1.2 // indirect
-	github.com/gethinode/mod-leaflet v1.1.1 // indirect
-	github.com/gethinode/mod-lottie v1.5.6 // indirect
-	github.com/gethinode/mod-simple-datatables v1.0.7 // indirect
-	github.com/gethinode/mod-utils/v2 v2.4.0 // indirect
-	github.com/nextapps-de/flexsearch v0.0.0-20240501124520-961c3ae84a87 // indirect
-	github.com/twbs/bootstrap v5.3.3+incompatible // indirect
+	github.com/airbnb/lottie-web v5.13.0+incompatible // indirect
+	github.com/gethinode/hinode/v3 v3.0.0 // indirect
+	github.com/gethinode/mod-bootstrap v1.3.7 // indirect
+	github.com/gethinode/mod-flexsearch/v5 v5.0.0 // indirect
+	github.com/gethinode/mod-fontawesome/v6 v6.0.0 // indirect
+	github.com/gethinode/mod-katex v1.1.5 // indirect
+	github.com/gethinode/mod-leaflet/v3 v3.0.0 // indirect
+	github.com/gethinode/mod-lottie/v3 v3.0.0 // indirect
+	github.com/gethinode/mod-simple-datatables/v4 v4.0.0 // indirect
+	github.com/gethinode/mod-utils/v6 v6.3.0 // indirect
+	github.com/nextapps-de/flexsearch v0.0.0-20260529083235-f7ed963096a0 // indirect
+	github.com/twbs/bootstrap v5.3.8+incompatible // indirect
 )
