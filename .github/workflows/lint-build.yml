@@ -68,6 +68,7 @@ jobs:
         if [ "$RUNNER_OS" == "Linux" ]; then
           sudo snap install dart-sass
         elif [ "$RUNNER_OS" == "macOS" ]; then
+          brew tap dart-lang/dart
           brew install sass/sass/sass
         elif [ "$RUNNER_OS" == "Windows" ]; then
           choco install sass

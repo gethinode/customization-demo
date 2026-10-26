@@ -68,11 +68,13 @@
     "buildTags": "extended"
   },
   "overrides": {
-    "@xhmikosr/bin-wrapper@^13": "^14.5.2",
+    "hugo-bin": {
+      "@xhmikosr/bin-wrapper": "^14.5.2"
+    },
     "brace-expansion@^1": "^1.1.21",
     "js-yaml@^4": "^4.3.2",
     "markdown-it@^14": "^14.3.3",
-    "postcss-selector-parser@^6": "^7.1.7"
+    "postcss-selector-parser": "^7.1.7"
   },
   "allowScripts": {
     "fsevents": true,
