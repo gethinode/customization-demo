@@ -64,11 +64,25 @@ jobs:
         cache-dependency-path: '**/package-lock.json'
 
     - name: Install Dart Sass
+      env:
+        DART_SASS_VERSION: "1.98.0"
       run:  |
         if [ "$RUNNER_OS" == "Linux" ]; then
           sudo snap install dart-sass
         elif [ "$RUNNER_OS" == "macOS" ]; then
-          brew install sass/sass/sass
+          case "$(uname -m)" in
+            arm64) SASS_ARCH="macos-arm64" ;;
+            x86_64) SASS_ARCH="macos-x64" ;;
+            *) echo "Unsupported macOS architecture: $(uname -m)" >&2; exit 1 ;;
+          esac
+          SASS_INSTALL_DIR="${RUNNER_TEMP}/dart-sass-${DART_SASS_VERSION}"
+          SASS_ARCHIVE="${RUNNER_TEMP}/dart-sass-${DART_SASS_VERSION}-${SASS_ARCH}.tar.gz"
+          mkdir -p "$SASS_INSTALL_DIR"
+          curl -fsSL "https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-${SASS_ARCH}.tar.gz" \
+            -o "$SASS_ARCHIVE"
+          tar -xzf "$SASS_ARCHIVE" -C "$SASS_INSTALL_DIR"
+          "$SASS_INSTALL_DIR/dart-sass/sass" --version
+          echo "$SASS_INSTALL_DIR/dart-sass" >> "$GITHUB_PATH"
         elif [ "$RUNNER_OS" == "Windows" ]; then
           choco install sass
         fi
